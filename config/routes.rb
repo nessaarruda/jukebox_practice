@@ -10,9 +10,7 @@ Rails.application.routes.draw do
   resources :carts, only: [:create]
   resources :orders, only: [:create]
 
-  resources :artists, only: [:index, :show, :new, :create] do
-    resources :songs, only: [:index, :new, :create, :edit, :update]
-  end
+  resources :songs, only: [:index, :new, :create, :edit, :update]
 
   resources :songs, only: [:index, :show]
 
