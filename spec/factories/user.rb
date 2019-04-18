@@ -4,8 +4,8 @@ FactoryBot.define do
     sequence(:password) { "password" }
     role { 0 }
   end
-  factory :admin, parent: :user do
-    sequence(:username) { |n| "admin_#{n}" }
-    role { 1 }
-  end
+  # factory :admin, parent: :user do
+  #   sequence(:username) { |n| "admin_#{n}" }
+  #   role { 1 }
+  # end
 end
