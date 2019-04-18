@@ -7,6 +7,7 @@ RSpec.describe 'user registration form', type: :feature do
     click_link 'Register as a User'
 
     name = 'fuzzyduck'
+
     fill_in :user_username, with: name
     fill_in :user_password, with: 'password'
     click_button 'Create User'

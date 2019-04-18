@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'categories workflow' do
+RSpec.describe 'categories workflow', type: :feature do
   context 'as an admin user' do
     it 'allows admin to see all categories' do
       user = User.create!(username: 'papa smurf', password: 'password', role: 1)

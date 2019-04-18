@@ -1,6 +1,6 @@
 class OrdersController < ApplicationController
   def create
-    user = User.find(session[:user_id])
+    user = current_user
     order = user.orders.create!
     @cart.contents.each do |song_id, quantity|
       order.order_songs.create(song_id: song_id , quantity: quantity)

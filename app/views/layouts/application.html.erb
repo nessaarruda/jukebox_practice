@@ -9,6 +9,7 @@
   </head>
 
   <body>
+    <nav>
     <% if current_user %>
       <%= link_to 'Log Out', logout_path %>
     <% else %>
@@ -18,6 +19,13 @@
 
     <p>Cart: <%= @cart.total_count %></p>
     <%= button_to "Create Order", orders_path %>
+    </nav>
+
+    <section id="flash-messages">
+    <%= flash.each do |type, message| %>
+      <%= content_tag :div, message, class: type %>
+    <% end %>
+    </section>
 
     <%= yield %>
   </body>
